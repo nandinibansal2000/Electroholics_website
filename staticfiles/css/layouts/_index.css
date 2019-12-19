@@ -1,0 +1,44 @@
+.call-out, .posts .post-teaser {
+  padding: 5% 20%;
+}
+@media (max-width: 1000px) {
+  .call-out, .posts .post-teaser {
+    padding: 7.5% 12.5%;
+  }
+}
+.posts .post-teaser p a:hover {
+  text-decoration: underline;
+  color: #295c32;
+}
+.call-out {
+  display: inline-block;
+  width: 100%;
+  background-color: #f98752;
+  background-size: cover;
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff;
+}
+.call-out p:last-child {
+  margin-bottom: 0;
+}
+.posts .post-teaser {
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
+  background-size: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.posts .excerpt {
+  margin-top: 1em;
+}
+.pagination .button {
+  margin: 0 1.5em;
+}
+.pagination .button i {
+  vertical-align: middle;
+}
+.pagination {
+  padding: 5% 20% 0 20%;
+  text-align: center;
+}

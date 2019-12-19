@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Competitions</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <link rel="icon" href="/static/img/favicon1.ico" type="image/x-icon">
+</head>
+<style>
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.items::before {
+  counter-increment: section;
+  content: "" counter(section) ": ";
+  
+}
+body{
+  counter-reset: section;
+ }
+ .tb2 {
+	background-color : rgb(70, 105, 158);
+  box-align: center;
+	width: 230px;
+}
+</style>
+<body>
+  <!-- Navbar -->
+	<div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <!-- Responsive Navbar -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </a>
+          </div>
+          <li><a style="position:absolute;left: 40px; top: 20px;font-size: 200%;color:white;" target="_blank" href="www.iiitd.ac.in">IIIT-D</a></li>
+            <!-- navigation -->
+            <nav class="pull-right nav-collapse collapse">
+              <ul id="menu-main" class="nav">
+                <!-- <li><a style="left: 10px; top: 0px;" target="_blank" href="www.iiitd.ac.in">IIIT-D</a></li>
+                e -->
+                <li><a target="_blank" href="/">Home</a></li>
+                <li><a target="_blank" href="/sessions">Sessions</a></li>
+                <li><a target="_blank" href="/inventory">Inventory</a></li>
+                <li><a target="_blank" href="/projects">Projects</a></li>
+                <li><a target="_blank" href="/competitions">Competitions</a></li>
+              </ul>
+            </nav>
+  
+        <!-- {% block content %}
+        {% endblock content %} -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="a" style="position: absolute; top: 10%; left: 40%; color:white;font-size: 300%; text-align: center;">
+      COMPETITIONS
+    </h1>
+      <div class="container" style="position: absolute; top: 25%;left: 60%;">
+        <h2 class="b"  style="color:white;font-size:70%; text-align:left;">
+          <br>
+            STATUS INDICATORS
+          <br>
+          <br>
+            PRP&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;PROPOSED
+          <br>
+            CMP&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;COMPLETED
+          <br>
+            CNC&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;CANCELLED
+          <br>
+            CNF&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;CONFIRMED
+        </h2>
+    </div>   
+    <br>
+    <div class="container" style="position: absolute; left: 59%; top: 100%;">
+        <table>
+          <thead>
+            <tr>
+              <th>S.No</th>  
+              <th>Name</th>
+              <th>Start Date</th>
+              <th>Status</th>
+              <th>Complete Date</th>
+              <th>Rank</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+        <tbody>
+        {% for obj in object_list %}
+        <tr>
+          <td><div class="items"></div></td>
+          <td>{{ obj.name  }} </td>
+          <td>{{ obj.start_date }}</td>
+          <td> &nbsp;&nbsp;{{ obj.status }}</td>
+          <td>{{ obj.comp_date }}</td>
+          <td>&nbsp;&nbsp;&nbsp;{{ obj.rank }}</td>
+          <td> <a href="http://{{ obj.link }}" target="_blank">LINK</a></td>
+        </tr>
+      {% endfor %} 
+  <!-- make the link ahrefff -->
+    </div>
+      </div>
+    </tbody>
+  </table>
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/jquery.scrollTo.js"></script>
+  <script src="/static/js/jquery.nav.js"></script>
+  <script src="/static/js/jquery.localScroll.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/jquery.prettyPhoto.js"></script>
+  <script src="/static/js/isotope.js"></script>
+  <script src="/static/js/jquery.flexslider.js"></script>
+  <script src="/static/js/inview.js"></script>
+  <script src="/static/js/animate.js"></script>
+  <script src="/static/js/custom.js"></script>
+  <script src="/static/contactform/contactform.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.site-header {
+  padding: 3% 6%;
+}
+@media (max-width: 1000px) {
+  .site-header {
+    padding: 3% 3%;
+  }
+}
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+.site-header a {
+  color: #233958;
+}
+.site-header .avatar {
+  height: 2em;
+  width: 2em;
+  float: left;
+  margin-top: -3px;
+  border-radius: 0.2em;
+  margin-right: 1em;
+}
+.site-header .club-logo {
+  height: 3em;
+  float: left;
+  margin-top: -3px;
+  border-radius: 0.2em;
+  margin-right: 1em;
+}
+.site-header .iiitd-logo {
+  height: 3em;
+  float: left;
+  margin-top: -3px;
+  border-radius: 0em;
+  margin-right: 0em;
+}
+.site-header .site-title {
+  float: left;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.site-header .site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 3;
+  float: right;
+  text-align: right;
+}
+.site-header .site-nav li {
+  display: inline;
+  float: left;
+  margin-right: 0.8em;
+}
+@media (max-width: 1100px) {
+  .site-header .site-nav ul {
+    display: inline-block;
+    float: left;
+    padding-top: 5%;
+    text-align: left;
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+.site-footer {
+  padding: 5% 20%;
+}
+@media (max-width: 1000px) {
+  .site-footer {
+    padding: 7.5% 12.5%;
+  }
+}
+.site-footer {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  color: #4068a1;
+  font-size: 0.9em;
+}
+.site-footer a {
+  color: #75c283;
+}
