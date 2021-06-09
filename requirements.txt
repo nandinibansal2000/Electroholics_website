@@ -1,6 +1,6 @@
--i https://pypi.org/simple
-django==2.2.2
+-i https://pypi.org/simple/
+django==2.2.22
 gunicorn==19.9.0
-pytz==2019.1
-sqlparse==0.3.0
+pytz==2021.1
+sqlparse==0.4.1
 whitenoise==3.3.1
